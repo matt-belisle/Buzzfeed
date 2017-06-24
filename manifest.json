@@ -1,0 +1,31 @@
+{
+// Required
+"manifest_version": 1,
+"name": "BuzzfeedToNormie",
+"version": "1.0",
+// Recommended
+"default_locale": "en",
+"description": "Replaces all instances of Buzzfeed with Normie News",
+
+// Optional
+"author": "Matt Belisle",
+"chrome_ui_overrides": {
+"bookmarks_ui": {
+"remove_bookmark_shortcut": true,
+"remove_button": true
+}
+},
+"content_scripts": [
+{
+"matches": [
+"http://*//*",
+"https://*//*"
+],
+"js": [
+"content.js"
+],
+"run_at": "document_end"
+}
+],
+
+}
